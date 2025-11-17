@@ -1,0 +1,84 @@
+:root {
+  --bg: #0f1115;
+  --fg: #e6e8ef;
+  --muted: #9aa0aa;
+  --primary: #6aa6ff;
+  --danger: #ff6a6a;
+  --ghost: #2a2f3a;
+  --card: #141822;
+  --border: #232833;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Noto Sans KR", sans-serif;
+  color: var(--fg);
+  background: radial-gradient(1000px 600px at 10% -10%, #1b2130 0%, #0f1115 40%);
+}
+
+.container {
+  max-width: 760px;
+  margin: 40px auto;
+  padding: 24px;
+}
+
+header h1 { margin: 0 0 6px; font-size: 28px; }
+.sub { color: var(--muted); }
+
+.controls {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px 16px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.field label { color: var(--muted); font-size: 14px; }
+.field input, .field select {
+  background: #0f1320;
+  color: var(--fg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 16px;
+}
+
+.field.checkbox { flex-direction: row; align-items: center; gap: 10px; }
+
+.buttons {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+button {
+  border: 1px solid var(--border);
+  background: var(--ghost);
+  color: var(--fg);
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-size: 15px;
+  cursor: pointer;
+}
+button.primary { background: var(--primary); border-color: #4a8ff5; color: #0a0f18; font-weight: 600; }
+button.danger  { background: var(--danger); border-color: #e85555; color: #0a0f18; font-weight: 600; }
+button.ghost   { background: #171c28; }
+
+.status {
+  margin-top: 16px;
+  background: #111622;
+  border: 1px dashed var(--border);
+  border-radius: 16px;
+  padding: 16px;
+}
+.mono { font-family: var(--mono); color: var(--muted); margin-top: 6px; }
