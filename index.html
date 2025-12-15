@@ -1,69 +1,29 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-    <meta charset="utf-8" />
-    <title>시간 입력</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neon Pulse City</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- 로컬 파일 -->
     <script src="p5.js"></script>
     <script src="p5.sound.min.js"></script>
-    <script defer src="sketch.js"></script>
-    <style>
-      html, body { height: 100%; margin: 0; }
-      body {
-        background: #121418;
-        color: #e9edf3;
-        font-family: "Noto Sans KR", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-        display: flex; align-items: center; justify-content: center;
-      }
-      .wrap { text-align: center; }
-      h2 { margin: 0 0 16px; letter-spacing: 0.02em; }
-
-      .row { display: flex; gap: 18px; justify-content: center; }
-      input[type="number"]{
-        width: 90px; height: 42px; border: none; outline: none;
-        border-radius: 8px; text-align: center; font-size: 18px;
-        background: #f3f5f7; color: #111;
-      }
-      button {
-        margin-top: 12px; padding: 10px 16px; font-size: 15px;
-        border: none; border-radius: 8px; cursor: pointer;
-        background: #f3f5f7; color: #111;
-      }
-
-      .panel {
-        margin-top: 20px;
-        width: 520px; max-width: 86vw;
-        background: #181b21; border: 1px solid #2a2f39; border-radius: 10px;
-        padding: 12px 14px; text-align: left; margin-left: auto; margin-right: auto;
-      }
-      .panel h3 {
-        margin: 0 0 8px; font-size: 16px; color: #cfd6e4; font-weight: 700;
-      }
-      .empty { color: #8e96a3; font-size: 14px; padding: 6px 2px; }
-      .item {
-        display: flex; justify-content: space-between; align-items: center;
-        padding: 8px 10px; border-radius: 8px;
-        background: #14181f; border: 1px solid #242a34;
-        margin-top: 8px;
-      }
-      .t { font-weight: 700; }
-      .sub { color: #98a0ac; font-size: 12px; margin-left: 6px; }
-      .del { background: #2a2f39; color: #e9edf3; border: 1px solid #353c48; }
-    </style>
   </head>
-  <body>
-    <div class="wrap">
-      <h2>시간 입력</h2>
-      <div class="row">
-        <input id="hour"   type="number" min="0" max="23" placeholder="시" />
-        <input id="minute" type="number" min="0" max="59" placeholder="분" />
-        <input id="second" type="number" min="0" max="59" placeholder="초" />
-      </div>
-      <button id="addBtn">알람 설정</button>
 
-      <div class="panel" id="panel">
-        <h3>알람 목록</h3>
-        <div id="list" class="empty">등록된 알람이 없습니다.</div>
-      </div>
-    </div>
+  <body>
+    <main id="app">
+      <header class="ui">
+        <div class="title">NEON PULSE CITY</div>
+        <div class="hint">
+          Click: Play/Pause · Move Mouse: Pan/City shift · [N] New neon palette · [1]/[2] Track switch · [H] UI toggle
+        </div>
+      </header>
+
+      <!-- p5 canvas는 sketch.js에서 생성 -->
+    </main>
+
+    <script src="sketch.js"></script>
   </body>
 </html>
