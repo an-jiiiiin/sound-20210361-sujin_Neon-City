@@ -1,12 +1,3 @@
-// --------------------------------------------------
-// Neon Pulse City (FINAL)
-// - Buildings with neon outline + window patterns (sparkle)
-// - Shy blurry star buttons to select/play tracks
-// - Floating UI panel toggle button
-// - Pan controls city shift
-// - Fix slow playback by forcing rate(1)
-// --------------------------------------------------
-
 let songA, songB, song;
 let amp;
 
@@ -53,7 +44,7 @@ function draw() {
   const panValue = map(mouseX, 0, width, -1, 1, true);
   const cityShift = map(panValue, -1, 1, -35, 35);
 
-  // 느린 재생 방지 + pan 적용
+  // 느린 재생 방지
   if (song && song.isPlaying()) {
     song.rate(1);
     song.pan(panValue);
@@ -167,7 +158,7 @@ function drawStars(level) {
     s.display();
   }
 
-  // 작은 안내 텍스트 (원치 않으면 삭제 가능)
+  // 작은 안내 텍스트
   noStroke();
   fill(255, 255, 255, 70);
   textSize(12);
@@ -349,7 +340,7 @@ class Building {
     noFill();
     rect(this.x + this.sway, gy - this.h / 2, this.w + 6, this.h + 6, this.round);
 
-    // ✅ 문양(창문) 그리기
+    // 문양 그리기
     this.drawWindows(level, gy);
   }
 
