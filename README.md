@@ -16,6 +16,5 @@
 - Somebodyhelpus.mp3
 - OneRe.mp3
 
-## How to Run (VS Code)
-Use Live Server or any local server.
-(Opening index.html directly may block audio in some browsers.)
+## How to Run
+좌측 상단 별 모양을 클릭해 1번 혹은 2번 음악을 재생하실 수 있습니다.
